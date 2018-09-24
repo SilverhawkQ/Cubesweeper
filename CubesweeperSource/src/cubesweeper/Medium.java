@@ -807,23 +807,23 @@ public class Medium extends javax.swing.JFrame {
         int red = mainColor.getRed();
         int blue = mainColor.getBlue();
         int green = mainColor.getGreen();
-        if (red<250){
-            red+=5;
+        if (red<240){
+            red+=10;
         }
-        else if(red>10){
-            red-=5;
+        else if(red>20){
+            red-=10;
         }
-        if (blue<250){
-            blue+=5;
+        if (blue<240){
+            blue+=10;
         }
-        else if(blue>10){
-            blue-=5;
+        else if(blue>20){
+            blue-=10;
         }
-        if (green<250){
-            green+=5;
+        if (green<240){
+            green+=10;
         }
-        else if(green>10){
-            green-=5;
+        else if(green>20){
+            green-=10;
         }
         else{
             red+=10;

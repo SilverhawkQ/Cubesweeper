@@ -800,28 +800,14 @@ public class Hard extends javax.swing.JFrame {
         int blue = mainColor.getBlue();
         int green = mainColor.getGreen();
         int alpha = mainColor.getAlpha();
-        		if (red>250){
-            red+=1;
+        if(red>=blue&&red>=green){
+            red+=10;
         }
-        else if(red<5){
-            red-=1;
+        else if(blue>=red&&blue>=green){
+            blue+=10;
         }
-        if (blue>250){
-            blue+=1;
-        }
-        else if(blue>10){
-            blue-=1;
-        }
-        if (green<250){
-            green+=1;
-        }
-        else if(green>10){
-            green-=1;
-        }
-        else{
-            red+=1;
-            green+=1;
-            blue+=1;
+        else if(green>=red&&green>=blue){
+            green+=10;
         }
         hiddenColor = new Color(red, green, blue);
         hiddenColor = new Color(red, green, blue, alpha);
