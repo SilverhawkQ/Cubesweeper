@@ -66,6 +66,8 @@ public class Hard extends javax.swing.JFrame {
         bt25 = new javax.swing.JButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
+        Title = new javax.swing.JMenuItem();
+        NGame = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
 
         lblFound.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
@@ -489,7 +491,23 @@ public class Hard extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 6, 11, 17);
         getContentPane().add(bt25, gridBagConstraints);
 
-        jMenu3.setText("File");
+        jMenu3.setText("Menu");
+
+        Title.setText("Back to Title");
+        Title.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TitleActionPerformed(evt);
+            }
+        });
+        jMenu3.add(Title);
+
+        NGame.setText("New Game");
+        NGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NGameActionPerformed(evt);
+            }
+        });
+        jMenu3.add(NGame);
 
         jMenuItem2.setText("Exit");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -789,6 +807,18 @@ public class Hard extends javax.swing.JFrame {
        System.exit(0);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    private void TitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TitleActionPerformed
+        setVisible(false);
+        Menu m = new Menu();
+        m.setVisible(true);
+    }//GEN-LAST:event_TitleActionPerformed
+
+    private void NGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NGameActionPerformed
+        setVisible(false);
+        Hard h = new Hard();
+        h.setVisible(true);
+    }//GEN-LAST:event_NGameActionPerformed
+
     public void lowerScore(){
         score--;
         
@@ -1001,6 +1031,8 @@ public class Hard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem NGame;
+    private javax.swing.JMenuItem Title;
     private javax.swing.JButton bt1;
     private javax.swing.JButton bt10;
     private javax.swing.JButton bt11;

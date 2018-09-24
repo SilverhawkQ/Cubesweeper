@@ -99,16 +99,19 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void EasyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EasyActionPerformed
+        setVisible(false);
         Easy e = new Easy();
         e.setVisible(true);
     }//GEN-LAST:event_EasyActionPerformed
 
     private void MediumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MediumActionPerformed
+        setVisible(false);
         Medium m = new Medium();
         m.setVisible(true);
     }//GEN-LAST:event_MediumActionPerformed
 
     private void HardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HardActionPerformed
+        setVisible(false);
         Hard h = new Hard();
         h.setVisible(true);
     }//GEN-LAST:event_HardActionPerformed
